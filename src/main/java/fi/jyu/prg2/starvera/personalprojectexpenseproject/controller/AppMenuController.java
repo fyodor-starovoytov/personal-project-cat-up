@@ -11,17 +11,6 @@ import javafx.scene.Parent;
 import java.io.IOException;
 
 public class AppMenuController {
-    @FXML
-    private Button customizeButton;
-    @FXML
-    private Button chooseButton;
-    @FXML
-    private Button activityButton;
-
-    @FXML
-    private void onTerminateButtonClick(){
-
-    }
 
     @FXML
     private void onCustomizeButtonClick(ActionEvent event) throws IOException {
@@ -39,7 +28,7 @@ public class AppMenuController {
 
     @FXML
     private void onActivityButtonClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fi/jyu/prg2/starvera/personalprojectexpenseproject/activity.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fi/jyu/prg2/starvera/personalprojectexpenseproject/activity_view.fxml"));
         Scene currentScene = ((Node) event.getSource()).getScene();
         currentScene.setRoot(root);
     }
