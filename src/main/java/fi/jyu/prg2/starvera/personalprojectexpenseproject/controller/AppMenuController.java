@@ -1,4 +1,50 @@
 package fi.jyu.prg2.starvera.personalprojectexpenseproject.controller;
 
+import fi.jyu.prg2.starvera.personalprojectexpenseproject.CatUp;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
+
 public class AppMenuController {
+    @FXML
+    private Button customizeButton;
+    @FXML
+    private Button chooseButton;
+    @FXML
+    private Button activityButton;
+
+    @FXML
+    private void onTerminateButtonClick(){
+
+    }
+
+    @FXML
+    private void onCustomizeButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fi/jyu/prg2/starvera/personalprojectexpenseproject/customization_view.fxml"));
+        Scene currentScene = ((Node) event.getSource()).getScene();
+        currentScene.setRoot(root);
+    }
+
+    @FXML
+    private void onChooseButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fi/jyu/prg2/starvera/personalprojectexpenseproject/cat_up_view.fxml"));
+        Scene currentScene = ((Node) event.getSource()).getScene();
+        currentScene.setRoot(root);
+    }
+
+    @FXML
+    private void onActivityButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fi/jyu/prg2/starvera/personalprojectexpenseproject/announcements_view.fxml"));
+        Scene currentScene = ((Node) event.getSource()).getScene();
+        currentScene.setRoot(root);
+    }
 }
