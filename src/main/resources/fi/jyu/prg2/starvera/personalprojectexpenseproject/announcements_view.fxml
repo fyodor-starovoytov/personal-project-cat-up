@@ -12,13 +12,11 @@
         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
     </padding>
    <Pane prefHeight="450.0" prefWidth="247.0" style="-fx-background-color: #9AFFB0;">
-      <children>
          <ListView layoutX="24.0" layoutY="40.0" prefHeight="376.0" prefWidth="200.0" style="-fx-background-color: #9AFFB0;" />
          <ButtonBar prefHeight="40.0" prefWidth="240.0">
            <buttons>
-             <Button alignment="CENTER" minWidth="58.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: #74A5FF;" text="Home" />
+             <Button onAction="#onReturnButtonClick" alignment="CENTER" minWidth="58.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: #74A5FF;" text="Home" />
            </buttons>
          </ButtonBar>
-      </children>
    </Pane>
 </VBox>

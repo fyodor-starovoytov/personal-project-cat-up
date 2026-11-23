@@ -10,7 +10,8 @@ import java.io.IOException;
 public class CatUp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CatUp.class.getResource("cat_up_view.fxml"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(CatUp.class.getResource("app_menu_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
