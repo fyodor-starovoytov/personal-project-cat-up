@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CatUp extends Application {
+    RunningAppListener listener = new RunningAppListener();
+
     @Override
     public void start(Stage stage) throws IOException {
 
@@ -16,5 +18,7 @@ public class CatUp extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+
+        listener.startReadingNewProcesses();
     }
 }

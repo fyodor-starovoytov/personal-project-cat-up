@@ -13,8 +13,13 @@ public class Notification {
     private final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
     public Notification(String notificationName, String notificationDescription) {
-        this.notificationName = new SimpleStringProperty(notificationName) ;
-        this.notificationDescription = new SimpleStringProperty(notificationDescription);
-        this.notificationTime = new SimpleStringProperty(LocalDateTime.now().format(FORMATTER));
+        this.notificationName =
+                new SimpleStringProperty(notificationName);
+        this.notificationTime =
+                new SimpleStringProperty(LocalDateTime.now().format(FORMATTER));
+        this.notificationDescription =
+                new SimpleStringProperty(notificationDescription + " (" + notificationTime + ")");
+
+        System.out.println(notificationName);
     }
 }
