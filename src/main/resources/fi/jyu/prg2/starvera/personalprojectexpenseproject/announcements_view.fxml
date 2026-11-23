@@ -16,7 +16,7 @@
          <ListView layoutX="24.0" layoutY="40.0" prefHeight="376.0" prefWidth="200.0" style="-fx-background-color: #9AFFB0;" />
          <ButtonBar prefHeight="40.0" prefWidth="240.0">
            <buttons>
-             <Button alignment="CENTER" minWidth="58.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: #74A5FF;" text="Home" />
+             <Button onAction="#onReturnButtonClick" alignment="CENTER" minWidth="58.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: #74A5FF;" text="Home" />
            </buttons>
          </ButtonBar>
       </children>
