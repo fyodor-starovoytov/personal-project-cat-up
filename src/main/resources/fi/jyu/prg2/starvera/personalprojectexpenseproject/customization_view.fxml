@@ -79,12 +79,12 @@
          </CheckBox>
          <ButtonBar layoutX="-4.0" prefHeight="40.0" prefWidth="221.0">
            <buttons>
-               <Label minWidth="54.0" prefHeight="17.0" prefWidth="168.0" text="Customisation">
+               <Label minWidth="54.0" prefHeight="17.0" prefWidth="168.0" text="Customization">
                   <font>
                      <Font size="14.0" />
                   </font>
                </Label>
-             <Button minWidth="0.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: #74A5FF;" text="Home" />
+             <Button onAction="#onReturnButtonClick" minWidth="0.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: #74A5FF;" text="Home" />
            </buttons>
          </ButtonBar>
       </children>
