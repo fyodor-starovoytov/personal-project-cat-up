@@ -1,16 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="fi.jyu.prg2.starvera.personalprojectexpenseproject.controller.CatUpController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox alignment="CENTER" prefHeight="458.0" prefWidth="254.0" scaleShape="false" spacing="10.0" style="-fx-background-color: #C30495;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="fi.jyu.prg2.starvera.personalprojectexpenseproject.controller.CatUpController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+   <Pane prefHeight="442.0" prefWidth="164.0" style="-fx-background-color: #FCBEED;">
+      <children>
+         <Label alignment="CENTER_RIGHT" layoutX="-10.0" prefHeight="99.0" prefWidth="70.0" text="Cat colour" />
+         <CheckBox mnemonicParsing="false" prefHeight="138.0" prefWidth="106.0" text="White">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox mnemonicParsing="false" prefHeight="184.0" prefWidth="79.0" text="Black">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox mnemonicParsing="false" prefHeight="230.0" prefWidth="79.0" text="brown">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+         </CheckBox>
+         <Label alignment="CENTER_RIGHT" layoutX="-23.0" prefHeight="274.0" prefWidth="89.0" text="Cat speaks:" />
+         <CheckBox mnemonicParsing="false" prefHeight="308.0" prefWidth="79.0" text="Font 1">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+            <font>
+               <Font name="Luminari" size="13.0" />
+            </font>
+         </CheckBox>
+         <CheckBox mnemonicParsing="false" prefHeight="351.0" prefWidth="79.0" text="Font 2">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+            <font>
+               <Font name="Marker Felt Thin" size="13.0" />
+            </font>
+         </CheckBox>
+         <CheckBox mnemonicParsing="false" prefHeight="395.0" prefWidth="79.0" text="Font 3">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+            <font>
+               <Font name="Annai MN Regular" size="13.0" />
+            </font>
+         </CheckBox>
+         <Label alignment="CENTER_RIGHT" layoutX="-56.0" prefHeight="438.0" prefWidth="112.0" text="Placemet" />
+         <CheckBox mnemonicParsing="false" prefHeight="470.0" prefWidth="106.0" text="Down right">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox mnemonicParsing="false" prefHeight="514.0" prefWidth="112.0" text="Down left">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox mnemonicParsing="false" prefHeight="556.0" prefWidth="96.0" text="Up right">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+         </CheckBox>
+         <CheckBox mnemonicParsing="false" prefHeight="597.0" prefWidth="96.0" text="Up left">
+            <padding>
+               <Insets left="5.0" />
+            </padding>
+         </CheckBox>
+         <ButtonBar layoutX="-4.0" prefHeight="40.0" prefWidth="221.0">
+           <buttons>
+               <Label minWidth="54.0" prefHeight="17.0" prefWidth="168.0" text="Customisation">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+             <Button minWidth="0.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: #74A5FF;" text="Home" />
+           </buttons>
+         </ButtonBar>
+      </children>
+   </Pane>
 </VBox>
