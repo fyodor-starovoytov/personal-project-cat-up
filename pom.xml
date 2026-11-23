@@ -6,8 +6,9 @@
 
     <groupId>fi.jyu.prg2.starvera</groupId>
     <artifactId>personal-project-cat-up</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>personal-project-expense-project</name>
+    <version>0.0.1</version>
+    <name>cat-up</name>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
