@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="fi.jyu.prg2.starvera.personalprojectexpenseproject.controller.popupController"
+      fx:controller="fi.jyu.prg2.starvera.personalprojectexpenseproject.controller.PopupController"
       alignment="BOTTOM_RIGHT" spacing="6"
       style="-fx-background-color: transparent;">
 

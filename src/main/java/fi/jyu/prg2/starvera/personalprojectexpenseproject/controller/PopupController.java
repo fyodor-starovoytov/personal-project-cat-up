@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 
-public class popupController {
+public class PopupController {
     private static final String RESOURCES = "/fi/jyu/prg2/starvera/personalprojectexpenseproject/";
     private static final double WIDTH = 280;
     private static final double HEIGHT = 160;
@@ -36,11 +36,11 @@ public class popupController {
 
     private Stage popup;
     private boolean exiting;
-    public static popupController create(Stage owner) throws IOException {
-        FXMLLoader loader = new FXMLLoader(resource("kissanäkymä.fxml"));
+    public static PopupController create(Stage owner) throws IOException {
+        FXMLLoader loader = new FXMLLoader(resource("cat_pop_up.fxml"));
         Scene scene = new Scene(
                 loader.load(), WIDTH, HEIGHT, Color.TRANSPARENT);
-        popupController controller = loader.getController();
+        PopupController controller = loader.getController();
 
         Stage stage = new Stage(StageStyle.TRANSPARENT);
         stage.initOwner(owner);
@@ -104,7 +104,7 @@ public class popupController {
 
     private static URL resource(String filename) {
         return Objects.requireNonNull(
-                popupController.class.getResource(RESOURCES + filename),
+                PopupController.class.getResource(RESOURCES + filename),
                 "Missing popup resource: " + filename);
     }
 

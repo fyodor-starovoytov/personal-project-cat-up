@@ -1,6 +1,5 @@
 package fi.jyu.prg2.starvera.personalprojectexpenseproject.controller;
 
-import fi.jyu.prg2.starvera.personalprojectexpenseproject.controller.popupController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,12 +15,12 @@ public class CustomizationController {
     private void onPreviewCatClick(ActionEvent event) throws IOException {
         Stage owner = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        popupController catPopup = (popupController)
-                owner.getProperties().get(popupController.class);
+        PopupController catPopup = (PopupController)
+                owner.getProperties().get(PopupController.class);
 
         if (catPopup == null) {
-            catPopup = popupController.create(owner);
-            owner.getProperties().put(popupController.class, catPopup);
+            catPopup = PopupController.create(owner);
+            owner.getProperties().put(PopupController.class, catPopup);
         }
 
         catPopup.showMessage("Notes just opened!");
