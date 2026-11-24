@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="fi.jyu.prg2.starvera.personalprojectexpenseproject.controller.popupController"
+      alignment="BOTTOM_RIGHT" spacing="6"
+      style="-fx-background-color: transparent;">
+
+    <Label fx:id="speechBubble" wrapText="true" maxWidth="240"
+           style="-fx-background-color: #fff8ec;
+                  -fx-background-radius: 14;
+                  -fx-padding: 8 12;
+                  -fx-text-fill: #47303b;" />
+
+    <ImageView fx:id="catImage" fitWidth="272" preserveRatio="true"
+               smooth="false" pickOnBounds="true"
+               onMouseClicked="#dismiss" />
+</VBox>

@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="458.0" prefWidth="254.0" scaleShape="false" spacing="10.0" style="-fx-background-color: #C30495;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="fi.jyu.prg2.starvera.personalprojectexpenseproject.controller.CatUpController">
+<VBox alignment="CENTER" prefHeight="536.0" prefWidth="352.0" scaleShape="false" spacing="10.0" style="-fx-background-color: #C30495;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.jyu.prg2.starvera.personalprojectexpenseproject.controller.CustomizationController">
     <padding>
         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
     </padding>
-   <Pane prefHeight="442.0" prefWidth="164.0" style="-fx-background-color: #FCBEED;">
+   <Pane prefHeight="547.0" prefWidth="332.0" style="-fx-background-color: #FCBEED;">
       <children>
          <Label alignment="CENTER_RIGHT" layoutX="-10.0" prefHeight="99.0" prefWidth="70.0" text="Cat colour" />
          <CheckBox mnemonicParsing="false" prefHeight="138.0" prefWidth="106.0" text="White">
@@ -77,14 +77,15 @@
                <Insets left="5.0" />
             </padding>
          </CheckBox>
-         <ButtonBar layoutX="-4.0" prefHeight="40.0" prefWidth="221.0">
+         <ButtonBar layoutX="-4.0" prefHeight="40.0" prefWidth="332.0">
            <buttons>
                <Label minWidth="54.0" prefHeight="17.0" prefWidth="168.0" text="Customization">
                   <font>
                      <Font size="14.0" />
                   </font>
                </Label>
-             <Button onAction="#onReturnButtonClick" minWidth="0.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-background-color: #74A5FF;" text="Home" />
+             <Button minWidth="0.0" mnemonicParsing="false" onAction="#onReturnButtonClick" prefHeight="26.0" style="-fx-background-color: #74A5FF;" text="Home" />
+               <Button minWidth="49.0" onAction="#onPreviewCatClick" prefHeight="26.0" prefWidth="180.0" style="-fx-background-color: #C30495;" text="Preview Cat" />
            </buttons>
          </ButtonBar>
       </children>
