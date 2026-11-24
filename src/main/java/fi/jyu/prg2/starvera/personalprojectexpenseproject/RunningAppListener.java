@@ -3,6 +3,7 @@ package fi.jyu.prg2.starvera.personalprojectexpenseproject;
 import fi.jyu.prg2.starvera.personalprojectexpenseproject.model.Notification;
 import oshi.SystemInfo;
 import oshi.software.os.OSProcess;
+import oshi.software.os.OperatingSystem;
 
 import java.util.HashSet;
 import java.util.List;
@@ -34,8 +35,14 @@ public class RunningAppListener {
 
                 if (previousPIDs != null && !previousPIDs.contains(pid)) {
                     String name = process.getName();
-                    Notification notification = new Notification(name + " has launched",
-                            "Program '" + name + "' has been just launched");
+
+                    boolean allNotifications = false;
+
+                    if (!allNotifications){
+
+                    }
+
+                    new Notification(name + " has launched", "Program '" + name + "' has been just launched");
                 }
         }
 
