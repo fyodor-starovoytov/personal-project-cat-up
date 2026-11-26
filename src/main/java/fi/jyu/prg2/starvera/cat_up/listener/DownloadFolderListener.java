@@ -1,27 +1,36 @@
 package fi.jyu.prg2.starvera.cat_up.listener;
 
-import fi.jyu.prg2.starvera.cat_up.model.Notification;
-import javafx.application.Platform;
 import oshi.SystemInfo;
-import oshi.software.os.OSProcess;
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.List;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Collections;
 import java.util.Set;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
+import java.util.Stack;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class DownloadFolderListener {
 
-    private final SystemInfo systemInfo = new SystemInfo();
-    private final String osFamily = systemInfo.getOperatingSystem().getFamily();
+    private final String HOME = System.getProperty("user.home");
+    private final Path PATH_DOWNLOADS = Paths.get(HOME, "Downloads");
+
+    private Set<Path> downloads;
+
+    public void readDownloads() {
+        try (Stream<Path> stream = Files.list(PATH_DOWNLOADS)) {
+            downloads = stream.collect(Collectors.toSet());
+        } catch (IOException e) {
+            System.out.println("Error: Couldn't find 'Downloads' folder");
+            throw new RuntimeException(e);
+        }
+    }
 
     private void startReadingDownloads(){
         ScheduledExecutor.timer.scheduleWithFixedDelay(() -> {
-
-            
 
         }, 5, 5, TimeUnit.SECONDS);
     }
