@@ -8,22 +8,25 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Notification {
-    private SimpleStringProperty notificationName;
-    private SimpleStringProperty notificationDescription;
-    private SimpleStringProperty notificationTime;
-    public static ObservableList<String> notifications = FXCollections.observableArrayList();
+    private final SimpleStringProperty notificationName;
+    private final SimpleStringProperty notificationDescription;
+    private final SimpleStringProperty notificationTime;
+    private final String processName;
 
-    private final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm:ss");
+    public static final ObservableList<Notification> notifications = FXCollections.observableArrayList();
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm:ss");
 
-    public Notification(String notificationName, String notificationDescription) {
-        this.notificationName =
-                new SimpleStringProperty(notificationName);
-        this.notificationTime =
-                new SimpleStringProperty(LocalDateTime.now().format(FORMATTER));
-        this.notificationDescription =
-                new SimpleStringProperty(notificationDescription);
+    public Notification(String notificationName, String notificationDescription, String processName) {
+        this.notificationName = new SimpleStringProperty(notificationName);
+        this.notificationTime = new SimpleStringProperty(LocalDateTime.now().format(FORMATTER));
+        this.notificationDescription = new SimpleStringProperty(notificationDescription);
+        this.processName = processName.toLowerCase();
 
-        notifications.add(this.toString());
+        notifications.add(this);
+    }
+
+    public String getProcessName() {
+        return processName;
     }
 
     @Override

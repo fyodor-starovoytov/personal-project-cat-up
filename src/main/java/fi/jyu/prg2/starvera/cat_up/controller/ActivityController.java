@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 
 public class ActivityController implements Initializable {
     @FXML
-    private ListView<String> activityList;
+    private ListView<Notification> activityList;
 
 //    void showActivity(Notification notification) {
 //        Platform.runLater(() -> activityList.getItems().add(0, notification));
