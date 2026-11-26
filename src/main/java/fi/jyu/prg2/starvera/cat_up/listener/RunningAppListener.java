@@ -1,4 +1,4 @@
-package fi.jyu.prg2.starvera.cat_up;
+package fi.jyu.prg2.starvera.cat_up.listener;
 
 import fi.jyu.prg2.starvera.cat_up.model.Notification;
 import javafx.application.Platform;
