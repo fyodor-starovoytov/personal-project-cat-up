@@ -34,9 +34,9 @@ public class RunningAppListener {
      * Locates new processes based on their PID and Name, comparing them to already existing ones in local {@link #previousPIDs} and {@link #previousProcessNames}
      * */
     public void startReadingNewProcesses() {
-        /**
-         * Prevents already running processes jump as notifications
-         * */
+        /*
+          Prevents already running processes jump as notifications
+          */
         for (OSProcess process : systemInfo.getOperatingSystem().getProcesses()) {
             previousPIDs.add(process.getProcessID());
             if (process.getName() != null) {
@@ -44,9 +44,9 @@ public class RunningAppListener {
             }
         }
 
-        /**
-         * Starts the timer
-         * */
+        /*
+          Starts the timer
+          */
         monitor.scheduleWithFixedDelay(() -> {
             List<OSProcess> systemProcesses = systemInfo.getOperatingSystem().getProcesses();
             Set<Integer> currentPIDs = new HashSet<>();
