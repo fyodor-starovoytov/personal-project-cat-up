@@ -20,6 +20,9 @@ public class Notification {
     public static final ObservableList<Notification> notifications = FXCollections.observableArrayList();
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm:ss");
 
+    /**
+     * Initializes Cat Pop-Up Screen
+     * */
     Stage stage = new Stage(StageStyle.TRANSPARENT);
     PopupController popupController = PopupController.create(stage);
 
