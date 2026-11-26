@@ -1,4 +1,4 @@
-package fi.jyu.prg2.starvera.personalprojectexpenseproject.controller;
+package fi.jyu.prg2.starvera.cat_up.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,7 +29,7 @@ public class CustomizationController {
     @FXML
     private void onReturnButtonClick(ActionEvent event) throws IOException {
         Parent menu = FXMLLoader.load(getClass().getResource(
-                "/fi/jyu/prg2/starvera/personalprojectexpenseproject/app_menu_view.fxml"));
+                "/fi/jyu/prg2/starvera/cat_up/app_menu_view.fxml"));
         Scene scene = ((Node) event.getSource()).getScene();
         scene.setRoot(menu);
     }

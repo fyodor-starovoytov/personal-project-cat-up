@@ -69,7 +69,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                fi.jyu.prg2.starvera.personalprojectexpenseproject/fi.jyu.prg2.starvera.personalprojectexpenseproject.CatUp
+                                fi.jyu.prg2.starvera.personalprojectexpenseproject/fi.jyu.prg2.starvera.cat_up.CatUp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

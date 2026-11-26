@@ -1,4 +1,4 @@
-package fi.jyu.prg2.starvera.personalprojectexpenseproject.controller;
+package fi.jyu.prg2.starvera.cat_up.controller;
 
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
@@ -19,7 +19,7 @@ import java.net.URL;
 import java.util.Objects;
 
 public class PopupController {
-    private static final String RESOURCES = "/fi/jyu/prg2/starvera/personalprojectexpenseproject/";
+    private static final String RESOURCES = "/fi/jyu/prg2/starvera/cat_up/";
     private static final double WIDTH = 280;
     private static final double HEIGHT = 160;
     private static final double MARGIN = 24;

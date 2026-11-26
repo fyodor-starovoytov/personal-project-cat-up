@@ -1,8 +1,6 @@
-package fi.jyu.prg2.starvera.personalprojectexpenseproject.controller;
+package fi.jyu.prg2.starvera.cat_up.controller;
 
-import fi.jyu.prg2.starvera.personalprojectexpenseproject.model.Notification;
-import javafx.application.Platform;
-import javafx.collections.ListChangeListener;
+import fi.jyu.prg2.starvera.cat_up.model.Notification;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,10 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,7 +24,7 @@ public class ActivityController implements Initializable {
 
     @FXML
     protected void onReturnButtonClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fi/jyu/prg2/starvera/personalprojectexpenseproject/app_menu_view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fi/jyu/prg2/starvera/cat_up/app_menu_view.fxml"));
         Scene currentScene = ((Node) event.getSource()).getScene();
         currentScene.setRoot(root);
     }

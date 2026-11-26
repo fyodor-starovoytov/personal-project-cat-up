@@ -1,4 +1,4 @@
-package fi.jyu.prg2.starvera.personalprojectexpenseproject.model;
+package fi.jyu.prg2.starvera.cat_up.model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -6,7 +6,6 @@ import javafx.collections.ObservableList;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 public class Notification {
     private SimpleStringProperty notificationName;

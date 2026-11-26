@@ -1,6 +1,6 @@
-package fi.jyu.prg2.starvera.personalprojectexpenseproject;
+package fi.jyu.prg2.starvera.cat_up;
 
-import fi.jyu.prg2.starvera.personalprojectexpenseproject.model.Notification;
+import fi.jyu.prg2.starvera.cat_up.model.Notification;
 import oshi.SystemInfo;
 import oshi.software.os.OSProcess;
 import oshi.software.os.OperatingSystem;
@@ -39,7 +39,11 @@ public class RunningAppListener {
                     boolean allNotifications = false;
 
                     if (!allNotifications){
+                        OperatingSystem systemInfo = new SystemInfo().getOperatingSystem();
+                        System.out.println(systemInfo.getFamily());
+                        if (systemInfo.getFamily().equalsIgnoreCase("windows")){
 
+                        }
                     }
 
                     new Notification(name + " has launched", "Program '" + name + "' has been just launched");

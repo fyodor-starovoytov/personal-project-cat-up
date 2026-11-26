@@ -6,7 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="439.0" prefWidth="279.0" spacing="10.0" style="-fx-background-color: #6A03AA;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="fi.jyu.prg2.starvera.personalprojectexpenseproject.controller.CatUpController">
+<VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="439.0" prefWidth="279.0" spacing="10.0" style="-fx-background-color: #6A03AA;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="fi.jyu.prg2.starvera.cat_up.controller.CatUpController">
     <padding>
         <Insets bottom="20.0" left="10.0" right="20.0" top="10.0" />
     </padding>

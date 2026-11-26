@@ -1,4 +1,4 @@
-package fi.jyu.prg2.starvera.personalprojectexpenseproject;
+package fi.jyu.prg2.starvera.cat_up;
 
 import javafx.application.Application;
 
