@@ -9,23 +9,12 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class RunningAppListener {
 
     private final SystemInfo systemInfo = new SystemInfo();
     private final String osFamily = systemInfo.getOperatingSystem().getFamily();
-    /**
-     * Initializes timer for new process checks
-     * */
-    private final ScheduledExecutorService monitor =
-            Executors.newSingleThreadScheduledExecutor(task -> {
-                Thread thread = new Thread(task, "monitor");
-                thread.setDaemon(true);
-                return thread;
-            });
 
     private Set<String> previousProcessNames = new HashSet<>();
     private Set<Integer> previousPIDs = new HashSet<>();
@@ -47,7 +36,7 @@ public class RunningAppListener {
         /*
           Starts the timer
           */
-        monitor.scheduleWithFixedDelay(() -> {
+        ScheduledExecutor.timer.scheduleWithFixedDelay(() -> {
             List<OSProcess> systemProcesses = systemInfo.getOperatingSystem().getProcesses();
             Set<Integer> currentPIDs = new HashSet<>();
             Set<String> currentProcessNames = new HashSet<>();

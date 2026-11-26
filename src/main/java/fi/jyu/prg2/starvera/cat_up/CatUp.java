@@ -1,6 +1,7 @@
 package fi.jyu.prg2.starvera.cat_up;
 
 import fi.jyu.prg2.starvera.cat_up.listener.RunningAppListener;
+import fi.jyu.prg2.starvera.cat_up.listener.ScheduledExecutor;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,7 +10,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CatUp extends Application {
-    RunningAppListener listener = new RunningAppListener();
+    RunningAppListener runningAppListener = new RunningAppListener();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -20,6 +21,6 @@ public class CatUp extends Application {
         stage.setScene(scene);
         stage.show();
 
-        listener.startReadingNewProcesses();
+        runningAppListener.startReadingNewProcesses();
     }
 }
