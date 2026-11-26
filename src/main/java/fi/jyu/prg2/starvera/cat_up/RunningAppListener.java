@@ -17,7 +17,9 @@ public class RunningAppListener {
 
     private final SystemInfo systemInfo = new SystemInfo();
     private final String osFamily = systemInfo.getOperatingSystem().getFamily();
-
+    /**
+     * Initializes timer for new process checks
+     * */
     private final ScheduledExecutorService monitor =
             Executors.newSingleThreadScheduledExecutor(task -> {
                 Thread thread = new Thread(task, "monitor");
@@ -28,7 +30,13 @@ public class RunningAppListener {
     private Set<String> previousProcessNames = new HashSet<>();
     private Set<Integer> previousPIDs = new HashSet<>();
 
+    /**
+     * Locates new processes based on their PID and Name, comparing them to already existing ones in local {@link #previousPIDs} and {@link #previousProcessNames}
+     * */
     public void startReadingNewProcesses() {
+        /**
+         * Prevents already running processes jump as notifications
+         * */
         for (OSProcess process : systemInfo.getOperatingSystem().getProcesses()) {
             previousPIDs.add(process.getProcessID());
             if (process.getName() != null) {
@@ -36,6 +44,9 @@ public class RunningAppListener {
             }
         }
 
+        /**
+         * Starts the timer
+         * */
         monitor.scheduleWithFixedDelay(() -> {
             List<OSProcess> systemProcesses = systemInfo.getOperatingSystem().getProcesses();
             Set<Integer> currentPIDs = new HashSet<>();
