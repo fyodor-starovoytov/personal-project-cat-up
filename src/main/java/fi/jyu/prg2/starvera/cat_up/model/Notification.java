@@ -1,9 +1,13 @@
 package fi.jyu.prg2.starvera.cat_up.model;
 
+import fi.jyu.prg2.starvera.cat_up.controller.PopupController;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -16,13 +20,17 @@ public class Notification {
     public static final ObservableList<Notification> notifications = FXCollections.observableArrayList();
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm:ss");
 
-    public Notification(String notificationName, String notificationDescription, String processName) {
+    Stage stage = new Stage(StageStyle.TRANSPARENT);
+    PopupController popupController = PopupController.create(stage);
+
+    public Notification(String notificationName, String notificationDescription, String processName) throws IOException {
         this.notificationName = new SimpleStringProperty(notificationName);
         this.notificationTime = new SimpleStringProperty(LocalDateTime.now().format(FORMATTER));
         this.notificationDescription = new SimpleStringProperty(notificationDescription);
         this.processName = processName.toLowerCase();
 
         notifications.add(this);
+        popupController.showMessage(notificationName);
     }
 
     public String getProcessName() {

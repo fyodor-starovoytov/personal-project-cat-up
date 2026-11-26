@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import oshi.SystemInfo;
 import oshi.software.os.OSProcess;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -61,11 +62,17 @@ public class RunningAppListener {
                     }
 
                     String displayName = name.substring(0, 1).toUpperCase() + name.substring(1);
-                    Platform.runLater(() -> new Notification(
-                            displayName + " has launched",
-                            "Program '" + name + "' has been just launched!\n" + processPath,
-                            lowerName
-                    ));
+                    Platform.runLater(() -> {
+                        try {
+                            new Notification(
+                                    displayName + " has been launched",
+                                    "Program '" + name + "' has been just launched!\n" + processPath,
+                                    lowerName
+                            );
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
 
                     previousProcessNames.add(lowerName);
                 }

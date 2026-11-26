@@ -107,6 +107,4 @@ public class PopupController {
                 PopupController.class.getResource(RESOURCES + filename),
                 "Missing popup resource: " + filename);
     }
-
-
 }
